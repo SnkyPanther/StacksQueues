@@ -1,5 +1,9 @@
-main: initStack.o initQueue.o push.o pop.o add.o remove.o displayStack.o displayQueue.o main.o
-	gcc -o main initStack.o initQueue.o push.o pop.o add.o remove.o displayStack.o displayQueue.o main.o
+main: stackEmpty.o queueEmpty.o initStack.o initQueue.o push.o pop.o add.o remove.o displayStack.o displayQueue.o main.o
+	gcc -o main stackEmpty.o queueEmpty.o initStack.o initQueue.o push.o pop.o add.o remove.o displayStack.o displayQueue.o main.o
+stackEmpty.o: stackEmpty.c main.h
+	gcc -c stackEmpty.c
+queueEmpty.o: queueEmpty.c main.h
+	gcc -c queueEmpty.c
 initStack.o: initStack.c main.h
 	gcc -c initStack.c
 initQueue.o: initQueue.c main.h
@@ -19,5 +23,5 @@ displayQueue.o: displayQueue.c main.h
 main.o: main.c main.h
 	gcc -c main.c
 clean:
-	rm main initStack.o initQueue.o push.o pop.o add.o remove.o displayStack.o displayQueue.o main.o
+	rm main stackEmpty.o queueEmpty.o initStack.o initQueue.o push.o pop.o add.o remove.o displayStack.o displayQueue.o main.o
 
