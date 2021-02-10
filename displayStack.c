@@ -10,7 +10,7 @@
 #include "main.h"
 
 void displayStack(struct node *sent) {
-  if(sent->next == NULL) {                    //checks if there are any nodes to print or it will seg fault
+  if(sent->next == NULL) {                    //checks if there are any nodes to print
     printf("Stack is empty\n");               //prints message and return to the main program
     return;
   }
